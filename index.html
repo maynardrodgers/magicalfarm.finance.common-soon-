@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Stone Finace</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/content.css?v=1.10">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="description" content="The Stone Finace">
+      <meta name="twitter:image:src" content="img/logo.png?v=1.2">
+      <meta name="twitter:site" content="@The Stone Finace">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="The Stone Finace">
+      <meta name="twitter:description" content="The Stone Finace">
+      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   </head>
+   <body class="scrollbar">
+      <!--header-->
+      <div class="header"></div>
+      <!--header-->
+      <div class="body">
+         <!--body home-->
+         <div class="body-content" id="home">
+            <!--header-->
+            <div class="header">
+               <div class="header-body" style=" margin: 50px auto; text-align: center; color: white; font-size: 30px;">
+                  <div>
+                     <img src="img/logo.png" width="300" height="300" style=" position: relative; top: 8px; margin-right: 20px;">
+                  </div>                 
+                  <div id="data-coutdown" style="font-size: 80px;font-weight: bold;color: #89CB05;text-shadow: 2px 2px #78973b;">15:06:02</div>
+                  <div style="font-size: 20px;">JOIN WITH US ON</div>
+                  <div style="margin-top: 10px;">
+                     <a href="#" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                      <img alt="twitter" src="img/twitter.svg" width="24" height="24"/>
+                     </a>            
+                     <a href="#" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                        <img alt="telegram" src="img/telegram.svg" width="24" height="24"/>
+                     </a>
+                     <a href="#" rel="noopener noreferrer" target="_blank" style="padding: 10px">
+                        <img alt="discord" src="img/discord.svg" width="24" height="24"/>
+                     </a>
+                  </div>
+               </div>           
+            </div>
+            <!--header-->
+         </div>
+         <!--body home-->
+      </div>
+      <!--body-->
+      <!-- effect-->
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+       <!-- effect-->
+      
+   </body>
+   <script type="text/javascript">
+      var countDownDate = new Date('3/5/2022 05:00:00 PM UTC').getTime();
+
+
+      var dom = setInterval(function(){
+         var now = new Date().getTime();
+         var distance = countDownDate - now;
+         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+         
+         document.getElementById("data-coutdown").innerHTML = (days*24+hours) + " : " + (minutes>9?minutes:('0'+minutes)) + " : " + (seconds>9?seconds:('0'+seconds));
+         
+         if (distance < 0) {
+            clearInterval(dom);
+            document.getElementById("data-coutdown").innerHTML = "EXPIRED";
+         }         
+        }, 1000);
+    </script>
+</html>
